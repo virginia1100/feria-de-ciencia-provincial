@@ -1,0 +1,371 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: #fff8fb;
+    color: #594655;
+    line-height: 1.8;
+}
+
+/* PORTADA */
+header {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    padding: 65px max(7%, calc((100% - 1050px) / 2)) 42px;
+    background: #f5d4e3;
+    border-bottom: 1px solid #e8b9d0;
+}
+
+header::after {
+    content: "CIENCIA";
+    position: absolute;
+    right: -12px;
+    bottom: -48px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(75px, 15vw, 180px);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.28);
+    pointer-events: none;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #fffafd;
+    color: #a6537f;
+    border: 1px solid #e9c1d6;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 25px 0 12px;
+    color: #8f426d;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 78px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.subtitulo {
+    position: relative;
+    z-index: 1;
+    color: #79556e;
+    font-size: 14px;
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 30px;
+}
+
+nav a {
+    padding: 7px 13px;
+    color: #854768;
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid #d9a6bf;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background: #fffafd;
+    color: #8f426d;
+}
+
+/* CONTENIDO */
+main {
+    max-width: 1000px;
+    margin: 55px auto;
+    padding: 0 22px;
+}
+
+section {
+    margin-bottom: 38px;
+    padding: 36px;
+    background: #fff;
+    border: 1px solid #f0dce7;
+    border-radius: 4px;
+    scroll-margin-top: 20px;
+}
+
+.numero {
+    margin: 0 0 10px;
+    color: #b56b91;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin: 0 0 20px;
+    color: #8f426d;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 39px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h3 {
+    margin: 0 0 8px;
+    color: #a4517b;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* PRESENTACIÓN DE LA VISITA */
+.introduccion {
+    border-top: 5px solid #dc9fbd;
+}
+
+figure {
+    margin: 25px 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    max-height: 420px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+figcaption {
+    margin-top: 8px;
+    color: #987f90;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* INFORMACIÓN SOBRE LA FERIA */
+.explicacion {
+    background: #f8f0fa;
+    border-color: #ead9f0;
+    border-left: 5px solid #c5a3d6;
+}
+
+.destacado {
+    margin-top: 24px;
+    padding: 18px 20px;
+    background: #fff4dc;
+    border-left: 3px solid #e5c47c;
+    color: #715568;
+    font-weight: 500;
+}
+
+/* ACTIVIDADES: RECORRIDO VISUAL */
+#actividades {
+    background: #fffafd;
+    border-top: 5px solid #e7b5cd;
+}
+
+.actividad {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid #f0dce7;
+}
+
+.actividad:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.numero-actividad {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #f6dce9;
+    color: #994d75;
+    border: 1px solid #eac3d7;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.actividad h3 {
+    margin-bottom: 5px;
+}
+
+.actividad p {
+    margin: 0;
+}
+
+/* PROYECTOS */
+.proyectos {
+    background: #fbeaf2;
+    border-top: 5px solid #dba0bd;
+}
+
+.proyecto {
+    margin-top: 20px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #eed5e2;
+    border-radius: 3px;
+    transition: transform 0.2s;
+}
+
+.proyecto:hover {
+    transform: translateY(-3px);
+}
+
+.proyecto:nth-of-type(odd) {
+    border-left: 4px solid #d9b5e5;
+}
+
+.proyecto:nth-of-type(even) {
+    border-left: 4px solid #e5a9c7;
+}
+
+.proyecto-titulo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 12px;
+}
+
+.proyecto-titulo span {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #e9d8f1;
+    color: #82538d;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.proyecto-titulo h3 {
+    margin: 0;
+}
+
+.proyecto p:last-child {
+    margin-bottom: 0;
+}
+
+/* OPINIÓN PERSONAL */
+.opinion {
+    background: #f4e6f5;
+    border-left: 5px solid #c4a0d0;
+}
+
+.opinion h2 {
+    color: #80518c;
+}
+
+/* FUENTES */
+.fuentes {
+    background: #fff;
+}
+
+.fuentes li {
+    margin-bottom: 12px;
+}
+
+.fuentes a {
+    color: #a14e78;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.fuentes a:hover {
+    color: #80518c;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    padding: 27px 15px;
+    background: #e9c1d6;
+    color: #71435d;
+    text-align: center;
+    border-top: 1px solid #d9a6bf;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 13px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 700px) {
+    header {
+        padding: 42px 22px 30px;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+
+    main {
+        margin: 30px auto;
+        padding: 0 13px;
+    }
+
+    section {
+        padding: 25px 19px;
+        margin-bottom: 23px;
+    }
+
+    .actividad {
+        gap: 13px;
+    }
+
+    .numero-actividad {
+        width: 34px;
+        height: 34px;
+    }
+
+    .proyecto {
+        padding: 18px;
+    }
+
+    header::after {
+        right: -8px;
+        bottom: -20px;
+        font-size: 75px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
